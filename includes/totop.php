@@ -1,0 +1,1 @@
+<a href="#topanch" id="back-to-top" class="smoothScroll" title="Back to top">&uarr;</a>
