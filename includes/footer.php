@@ -56,7 +56,8 @@
                 </ul>
             </div>
 
-         
+         <div style="clear:both;">
+         </div>
         </div>
     </footer>
 
@@ -68,7 +69,10 @@
 <script src="./js/jquery.easing.1.3.js"></script>
 <script type="text/javascript" src="./js/jquery.waypoints.js"></script>
 
-
+<!--[if !(IE 7)]><!--> 
+<script src="./js/jquery-migrate-1.4.1.js"></script> 
+<script src="./js/jquery-migrate-1.2.1.min.js"></script>  
+<!--< ![endif]-->
 
 
 </body>

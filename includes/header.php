@@ -1,4 +1,7 @@
 <!DOCTYPE HTML>
+<?php if(preg_match('/MSIE\s(?P<v>\d+)/i', @$_SERVER['HTTP_USER_AGENT'], $B) && $B['v'] == 7){ ?>
+<html lang="en" class="html" style="overflow-x: hidden">
+<?php } ?>
 <head>
 <meta charset="shift_jis">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,10 +24,20 @@
 <meta property="og:image" content="images/logo.png" />
 <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 <link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<!--[if IE 7]>
+	<link href="css/ie7Bootstrap.css" rel="stylesheet">
+	<link href="css/ie7style.css" rel="stylesheet">
+<![endif]-->
+<!--[if IE 8]>
+	<style>
+	.footer-bs .footer-brand { border-right: #686666 0.01em solid;}
+	.footer-bs .footer-nav { border-right: #686666 0.01em solid;}
+	</style>
+<![endif]-->
 <link href="css/animate.css" rel="stylesheet">
 <link href="css/common.css" rel="stylesheet">
 <link href="css/hover.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
 <link href="/css/bootstrap-ie7.css" rel="stylesheet">
 
 

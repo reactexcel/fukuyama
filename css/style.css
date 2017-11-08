@@ -1202,11 +1202,32 @@ margin-bottom:3px;
   background-size: 100% auto; 
   }
 
+  .primary-ie7{
+    background-color: #c34554;
+    margin-right: 5px;
+  }
+
+  .secondary-ie7{
+    background-color: #111418;
+    margin-left: 5px;
+  }
 
   .newsletter{
 
 
   background-image: url("../images/newsletter.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% auto; 
+  padding-top:100px;
+   padding-bottom:100px;
+   color:white;
+  }
+
+  .newsletter-ie7{
+
+
+  /*background-image: url("../images/newsletter.png");*/
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% auto; 

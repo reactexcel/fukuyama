@@ -168,10 +168,11 @@ if (typeof jQuery === 'undefined') {
   // ==============
 
   // $(document).on('click.bs.alert.data-api', dismiss, Alert.prototype.close)
-  $(document).click('click.bs.alert.data-api', dismiss, Alert.prototype.close)
-
+  if((document || document.documentMode) && document.documentMode != 7){
+    $(document).on('click.bs.alert.data-api', dismiss, Alert.prototype.close)
+  }
+  
 }(jQuery);
-
 /* ========================================================================
  * Bootstrap: button.js v3.3.6
  * http://getbootstrap.com/javascript/#buttons
@@ -279,17 +280,19 @@ if (typeof jQuery === 'undefined') {
 
   // BUTTON DATA-API
   // ===============
-
-  $(document)
-    .click('click.bs.button.data-api', '[data-toggle^="button"]', function (e) {
+  if((document || document.documentMode) && document.documentMode != 7){
+    $(document)
+    .on('click.bs.button.data-api', '[data-toggle^="button"]', function (e) {
       var $btn = $(e.target)
       if (!$btn.hasClass('btn')) $btn = $btn.closest('.btn')
       Plugin.call($btn, 'toggle')
       if (!($(e.target).is('input[type="radio"]') || $(e.target).is('input[type="checkbox"]'))) e.preventDefault()
     })
-    .click('focus.bs.button.data-api blur.bs.button.data-api', '[data-toggle^="button"]', function (e) {
+    .on('focus.bs.button.data-api blur.bs.button.data-api', '[data-toggle^="button"]', function (e) {
       $(e.target).closest('.btn').toggleClass('focus', /^focus(in)?$/.test(e.type))
     })
+  }
+  
 
 }(jQuery);
 
@@ -318,11 +321,11 @@ if (typeof jQuery === 'undefined') {
     this.$active     = null
     this.$items      = null
 
-    this.options.keyboard && this.$element.click('keydown.bs.carousel', $.proxy(this.keydown, this))
+    this.options.keyboard && this.$element.on('keydown.bs.carousel', $.proxy(this.keydown, this))
 
     this.options.pause == 'hover' && !('ontouchstart' in document.documentElement) && this.$element
-      .click('mouseenter.bs.carousel', $.proxy(this.pause, this))
-      .click('mouseleave.bs.carousel', $.proxy(this.cycle, this))
+      .on('mouseenter.bs.carousel', $.proxy(this.pause, this))
+      .on('mouseleave.bs.carousel', $.proxy(this.cycle, this))
   }
 
   Carousel.VERSION  = '3.3.6'
@@ -518,16 +521,21 @@ if (typeof jQuery === 'undefined') {
     e.preventDefault()
   }
 
-  $(document)
-    .click('click.bs.carousel.data-api', '[data-slide]', clickHandler)
-    .click('click.bs.carousel.data-api', '[data-slide-to]', clickHandler)
 
-  $(window).click('load', function () {
+  if((document || document.documentMode) && document.documentMode != 7){
+    $(document)
+    .on('click.bs.carousel.data-api', '[data-slide]', clickHandler)
+    .on('click.bs.carousel.data-api', '[data-slide-to]', clickHandler)
+
+    $(window).on('load', function () {
     $('[data-ride="carousel"]').each(function () {
       var $carousel = $(this)
       Plugin.call($carousel, $carousel.data())
     })
   })
+  }
+
+  
 
 }(jQuery);
 
@@ -728,8 +736,8 @@ if (typeof jQuery === 'undefined') {
 
   // COLLAPSE DATA-API
   // =================
-
-  $(document).click('click.bs.collapse.data-api', '[data-toggle="collapse"]', function (e) {
+  if((document || document.documentMode) && document.documentMode != 7){
+    $(document).on('click.bs.collapse.data-api', '[data-toggle="collapse"]', function (e) {
     var $this   = $(this)
 
     if (!$this.attr('data-target')) e.preventDefault()
@@ -740,6 +748,8 @@ if (typeof jQuery === 'undefined') {
 
     Plugin.call($target, option)
   })
+  }
+  
 
 }(jQuery);
 
@@ -761,7 +771,7 @@ if (typeof jQuery === 'undefined') {
   var backdrop = '.dropdown-backdrop'
   var toggle   = '[data-toggle="dropdown"]'
   var Dropdown = function (element) {
-    $(element).click('click.bs.dropdown', this.toggle)
+    $(element).on('click.bs.dropdown', this.toggle)
   }
 
   Dropdown.VERSION = '3.3.6'
@@ -816,7 +826,7 @@ if (typeof jQuery === 'undefined') {
         $(document.createElement('div'))
           .addClass('dropdown-backdrop')
           .insertAfter($(this))
-          .click('click', clearMenus)
+          .click(clearMenus)
       }
 
       var relatedTarget = { relatedTarget: this }
@@ -899,13 +909,15 @@ if (typeof jQuery === 'undefined') {
 
   // APPLY TO STANDARD DROPDOWN ELEMENTS
   // ===================================
-
-  $(document)
+  if((document || document.documentMode) && document.documentMode != 7){
+    $(document)
     .on('click.bs.dropdown.data-api', clearMenus)
     .on('click.bs.dropdown.data-api', '.dropdown form', function (e) { e.stopPropagation() })
     .on('click.bs.dropdown.data-api', toggle, Dropdown.prototype.toggle)
     .on('keydown.bs.dropdown.data-api', toggle, Dropdown.prototype.keydown)
     .on('keydown.bs.dropdown.data-api', '.dropdown-menu', Dropdown.prototype.keydown)
+  }
+  
 
 }(jQuery);
 
@@ -1227,8 +1239,8 @@ if (typeof jQuery === 'undefined') {
 
   // MODAL DATA-API
   // ==============
-
-  $(document).on('click.bs.modal.data-api', '[data-toggle="modal"]', function (e) {
+  if((document || document.documentMode) && document.documentMode != 7){
+    $(document).on('click.bs.modal.data-api', '[data-toggle="modal"]', function (e) {
     var $this   = $(this)
     var href    = $this.attr('href')
     var $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) // strip for ie7
@@ -1244,6 +1256,8 @@ if (typeof jQuery === 'undefined') {
     })
     Plugin.call($target, option, this)
   })
+  }
+  
 
 }(jQuery);
 
@@ -2034,13 +2048,15 @@ if (typeof jQuery === 'undefined') {
 
   // SCROLLSPY DATA-API
   // ==================
-
-  $(window).on('load.bs.scrollspy.data-api', function () {
+  if((document || document.documentMode) && document.documentMode != 7){
+    $(window).on('load.bs.scrollspy.data-api', function () {
     $('[data-spy="scroll"]').each(function () {
       var $spy = $(this)
       Plugin.call($spy, $spy.data())
     })
   })
+  }
+  
 
 }(jQuery);
 
@@ -2193,10 +2209,12 @@ if (typeof jQuery === 'undefined') {
     e.preventDefault()
     Plugin.call($(this), 'show')
   }
-
-  $(document)
+  if((document || document.documentMode) && document.documentMode != 7){
+    $(document)
     .on('click.bs.tab.data-api', '[data-toggle="tab"]', clickHandler)
     .on('click.bs.tab.data-api', '[data-toggle="pill"]', clickHandler)
+  }
+  
 
 }(jQuery);
 
@@ -2346,8 +2364,8 @@ if (typeof jQuery === 'undefined') {
 
   // AFFIX DATA-API
   // ==============
-
-  $(window).on('load', function () {
+  if((document || document.documentMode) && document.documentMode != 7){
+    $(window).on('load', function () {
     $('[data-spy="affix"]').each(function () {
       var $spy = $(this)
       var data = $spy.data()
@@ -2360,5 +2378,7 @@ if (typeof jQuery === 'undefined') {
       Plugin.call($spy, data)
     })
   })
+  }
+  
 
 }(jQuery);
