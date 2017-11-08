@@ -13,12 +13,8 @@ if (preg_match('/MSIE\s(?P<v>\d+)/i', @$_SERVER['HTTP_USER_AGENT'], $B) && $B['v
 ?>
    <div class="row">
       <div class="col-xs-12" style="position:relative; padding-left:0px; margin-bottom:-5px;">
-         <img src="images/25mtruck.jpg" width="100%" height="700px" style="z-index:1; width:100%; height: 700px;"/>
-         <div class="cd-hero" style="z-index:999;
-    position:absolute;
-    top:30px; left:34%; 
-    margin:0px auto; 
-    width:500px">
+         <img src="images_ie/25mtruck.jpeg" width="100%" height="700px" style="z-index:1; width:100%; height: 700px;"/>
+         <div class="cd-hero" style="z-index:999;position:absolute;top:30px; left:34%;  margin:0px auto; width:500px">
          <ul class="cd-hero-slider autoplay" >
          <li class="selected">
             <div class="cd-full-width">
@@ -96,7 +92,7 @@ if(preg_match('/MSIE\s(?P<v>\d+)/i', @$_SERVER['HTTP_USER_AGENT'], $B) && $B['v'
 <div class="hidden-sm hidden-xs">
    <div class="row">
       <div class="col-xs-12" style="position:relative; padding-left:0px;">
-         <img src="images/drivertruckhome.jpg" height="450px" style="z-index:1; width:75%; z-index:1; float:right; height:450px;"/>
+         <img src="images_ie/drivertruckhome.jpeg" height="450px" style="z-index:1; width:75%; z-index:1; float:right; height:450px;"/>
          <img src="images/shape.png" height="450px" style="z-index:50; width:70%; float:left; position:absolute; height:450px"/>
          <div class="row" style="z-index:999; position:absolute; margin:0px auto; width:80%;">
             <div class="col-sm-12 col-md-6 col-md-offset-1">
@@ -186,7 +182,7 @@ if (preg_match('/MSIE\s(?P<v>\d+)/i', @$_SERVER['HTTP_USER_AGENT'], $B) && $B['v
 ?>
       <div class="row" >
       <div class="col-xs-12 text-center" style="position:relative;">
-         <img src="images/25mtruck.jpg" width="100%" height="550px" style="z-index:1; width:100%; margin-left:-30px; height:550px;"/>
+         <img src="images_ie/25mtruck.jpeg" width="100%" height="550px" style="z-index:1; width:100%; margin-left:-30px; height:550px;"/>
          <div id="whitebox-ie7">
             <div id="whiteboxinside">
                   <h2>CHANGE, CHALLENGE, AND <br>CONNECT TOWARDS 2020.</h2>
@@ -289,7 +285,7 @@ if(preg_match('/MSIE\s(?P<v>\d+)/i', @$_SERVER['HTTP_USER_AGENT'], $B) && $B['v'
 ?>
 <div class="row newsletter-ie7 mt-70" style="height:100px">
    <div class="col-xs-12" style="position:relative; margin-top:-70px;">
-      <img src="images/newsletter.png" width="100%" height="250px" style="z-index:1; width:100%; height:250px;"/>
+      <img src="images_ie/newsletter.png" width="100%" height="250px" style="z-index:1; width:100%; height:250px;"/>
       <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
          <style type="text/css">
             #mc_embed_signup{ clear:left; font:14px Helvetica,Arial,sans-serif; z-index:999;position:absolute;top:30%; left:10%; margin:0px auto; width:80%}
@@ -317,7 +313,7 @@ if(preg_match('/MSIE\s(?P<v>\d+)/i', @$_SERVER['HTTP_USER_AGENT'], $B) && $B['v'
                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_062f58fe7a0e1b52c64974c2a_c74fb95297" tabindex="-1" value=""></div>
                         </div>
                         <div class="col-sm-3" style="padding-right:0px; padding-left:0px; width:0%; margin-left:-35px;">
-                           <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                           <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" style="margin-left:0px"></div>
                         </div>
                      </div>
                      <?php } ?>

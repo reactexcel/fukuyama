@@ -10,7 +10,23 @@ $author = "J-Cast";
 
 
 <!--- HEADER --> 
+<?php 
+if (preg_match('/MSIE\s(?P<v>\d+)/i', @$_SERVER['HTTP_USER_AGENT'], $B) && $B['v'] <= 8) {
+?>
+<div class="row no-gutters" >
+   <div class="col-xs-12" style="position:relative;">
+      <img src="images_ie/headerinvestor.png" width="100%" style="z-index:1; width:100%;height:350px;"/>
+         <div style="z-index:999;position:absolute;top:30px; left:4%; margin:0px auto; width:70%">
+            <p class="headertext">Information For Shareholders<br></p>
+            <p class="headersubtext">Learn more about Fukuyama Transporting.</p><br>
+         </div>
+      </div>
+   </div>
+</div> 
+<?php
+} else {
 
+?>
 <div class="row no-gutters" >
   <div class="col-xs-12">
     <div id="headerinvestor">
@@ -21,6 +37,9 @@ $author = "J-Cast";
     </div>
   </div>
 </div> 
+<?php
+}
+?> 
 
 <!--BODY-->
 
