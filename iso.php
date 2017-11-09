@@ -7,11 +7,11 @@ $author = "J-Cast";
 ?>
 <?php include("includes/header.php"); ?>
 <?php include("includes/topnav.php"); ?>
-<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+
 
 <!--- HEADER --> 
 <?php 
-if (preg_match('/MSIE\s(?P<v>\d+)/i', @$_SERVER['HTTP_USER_AGENT'], $B) && $B['v'] <= 8) {
+if (preg_match('/MSIE\s(?P<v>\d+)/i', @$_SERVER['HTTP_USER_AGENT'], $B) && $B['v'] <= 9) {
 ?>
 <div class="row no-gutters" >
    <div class="col-xs-12" style="position:relative;">

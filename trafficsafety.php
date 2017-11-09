@@ -10,7 +10,7 @@ $footer_copy = "Fukuyama Transportation. All Rights Reserved.";
 <?php include("includes/topnav.php"); ?>
 <!--- HEADER --> 
 <?php 
-if (preg_match('/MSIE\s(?P<v>\d+)/i', @$_SERVER['HTTP_USER_AGENT'], $B) && $B['v'] <= 8) {
+if (preg_match('/MSIE\s(?P<v>\d+)/i', @$_SERVER['HTTP_USER_AGENT'], $B) && $B['v'] <= 9) {
 ?>
 <div class="row no-gutters" >
    <div class="col-xs-12" style="position:relative;">

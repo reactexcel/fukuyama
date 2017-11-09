@@ -166,9 +166,8 @@ if (typeof jQuery === 'undefined') {
 
   // ALERT DATA-API
   // ==============
-
   // $(document).on('click.bs.alert.data-api', dismiss, Alert.prototype.close)
-  if((document || document.documentMode) && document.documentMode != 7){
+  if((document || document.documentMode) && document.documentMode != 7 && document.documentMode != 8 && document.documentMode != 9){
     $(document).on('click.bs.alert.data-api', dismiss, Alert.prototype.close)
   }
   
@@ -280,7 +279,7 @@ if (typeof jQuery === 'undefined') {
 
   // BUTTON DATA-API
   // ===============
-  if((document || document.documentMode) && document.documentMode != 7){
+  if(document && document.documentMode && document.documentMode != 7 && document.documentMode != 8 && document.documentMode != 9){
     $(document)
     .on('click.bs.button.data-api', '[data-toggle^="button"]', function (e) {
       var $btn = $(e.target)
@@ -522,7 +521,7 @@ if (typeof jQuery === 'undefined') {
   }
 
 
-  if((document || document.documentMode) && document.documentMode != 7){
+  if(document && document.documentMode && document.documentMode != 7 && document.documentMode != 8 && document.documentMode != 9){
     $(document)
     .on('click.bs.carousel.data-api', '[data-slide]', clickHandler)
     .on('click.bs.carousel.data-api', '[data-slide-to]', clickHandler)
@@ -736,7 +735,7 @@ if (typeof jQuery === 'undefined') {
 
   // COLLAPSE DATA-API
   // =================
-  if((document || document.documentMode) && document.documentMode != 7){
+  if(document && document.documentMode && document.documentMode != 7 && document.documentMode != 8 && document.documentMode != 9){
     $(document).on('click.bs.collapse.data-api', '[data-toggle="collapse"]', function (e) {
     var $this   = $(this)
 
@@ -909,7 +908,7 @@ if (typeof jQuery === 'undefined') {
 
   // APPLY TO STANDARD DROPDOWN ELEMENTS
   // ===================================
-  if((document || document.documentMode) && document.documentMode != 7){
+  if(document && document.documentMode && document.documentMode != 7 && document.documentMode != 8 && document.documentMode != 9){
     $(document)
     .on('click.bs.dropdown.data-api', clearMenus)
     .on('click.bs.dropdown.data-api', '.dropdown form', function (e) { e.stopPropagation() })
@@ -1239,7 +1238,7 @@ if (typeof jQuery === 'undefined') {
 
   // MODAL DATA-API
   // ==============
-  if((document || document.documentMode) && document.documentMode != 7){
+  if(document && document.documentMode && document.documentMode != 7 && document.documentMode != 8 && document.documentMode != 9){
     $(document).on('click.bs.modal.data-api', '[data-toggle="modal"]', function (e) {
     var $this   = $(this)
     var href    = $this.attr('href')
@@ -2048,7 +2047,7 @@ if (typeof jQuery === 'undefined') {
 
   // SCROLLSPY DATA-API
   // ==================
-  if((document || document.documentMode) && document.documentMode != 7){
+  if(document && document.documentMode && document.documentMode != 7 && document.documentMode != 8 && document.documentMode != 9){
     $(window).on('load.bs.scrollspy.data-api', function () {
     $('[data-spy="scroll"]').each(function () {
       var $spy = $(this)
@@ -2209,7 +2208,7 @@ if (typeof jQuery === 'undefined') {
     e.preventDefault()
     Plugin.call($(this), 'show')
   }
-  if((document || document.documentMode) && document.documentMode != 7){
+  if(document && document.documentMode && document.documentMode != 7 && document.documentMode != 8 && document.documentMode != 9){
     $(document)
     .on('click.bs.tab.data-api', '[data-toggle="tab"]', clickHandler)
     .on('click.bs.tab.data-api', '[data-toggle="pill"]', clickHandler)
@@ -2364,7 +2363,7 @@ if (typeof jQuery === 'undefined') {
 
   // AFFIX DATA-API
   // ==============
-  if((document || document.documentMode) && document.documentMode != 7){
+  if(document && document.documentMode && document.documentMode != 7 && document.documentMode != 8 && document.documentMode != 9){
     $(window).on('load', function () {
     $('[data-spy="affix"]').each(function () {
       var $spy = $(this)

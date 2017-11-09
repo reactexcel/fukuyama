@@ -224,9 +224,11 @@
 	if (doc.attachEvent ? doc.readyState === "complete" : doc.readyState !== "loading") {
 		runReady();
 	} else {
+		if((document || document.documentMode) && document.documentMode != 7 && document.documentMode != 8 && document.documentMode != 9){
 		doc.addEventListener( "DOMContentLoaded", runReady, false );
 		doc.addEventListener( "readystatechange", runReady, false );
 		win.addEventListener( "load", runReady, false );
+		}
 	}
 
 
@@ -1513,8 +1515,10 @@
 				customEventLoop = null;
 
 				initEventCache( this, evt );
-
-				this.addEventListener( evt, domEventCallback, false );
+                if((document || document.documentMode) && document.documentMode != 7 && document.documentMode != 8 && document.documentMode != 9){
+                	this.addEventListener( evt, domEventCallback, false );
+                }
+				
 
 				addToEventCache( this, evt, {
 					callfunc: customEventCallback || domEventCallback,

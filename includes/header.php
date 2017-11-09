@@ -38,7 +38,8 @@
 <link href="css/animate.css" rel="stylesheet">
 <link href="css/common.css" rel="stylesheet">
 <link href="css/hover.css" rel="stylesheet">
-<link href="/css/bootstrap-ie7.css" rel="stylesheet">
+<!--[if (IE 7) | (IE 8) | (IE 9)]><!--> <link href="/css/bootstrap-ie7.css" rel="stylesheet"> <!--< ![endif]-->
+
 
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
