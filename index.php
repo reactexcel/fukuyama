@@ -13,15 +13,15 @@ if (preg_match('/MSIE\s(?P<v>\d+)/i', @$_SERVER['HTTP_USER_AGENT'], $B) && $B['v
 ?>
    <div class="row">
       <div class="col-xs-12" style="position:relative; padding-left:0px; margin-bottom:-5px;">
-         <img src="images_ie/25mtruck.jpeg" width="100%" height="700px" style="z-index:1; width:100%; height: 700px;"/>
-         <div class="cd-hero" style="z-index:999;position:absolute;top:30px; left:34%;  margin:0px auto; width:500px">
-         <ul class="cd-hero-slider autoplay" >
-         <li class="selected">
-            <div class="cd-full-width">
+         <img src="images_ie/25mtruck.jpeg" width="100%" height="700px" style="z-index:1;"/>
+         <div style="z-index:999;position:absolute;top:30px; left:34%;  margin:0px auto; width:500px">
+         <ul class="my-hero-slider" >
+         <li class="selected" style="position:relative">
+            <div class="my-full-width">
                <h1><font color="white">FUKUYAMA TRANSPORTING</font></h1>
-               <p>Boldly Riding The Wave Of Innovation.</p>
-               <a href="about" class="cd-btn primary-ie7">About Us</a>
-               <a href="tracking_no_hunt" class="cd-btn secondary-ie7">Tracking</a>
+               <p><font color="white">Boldly Riding The Wave Of Innovation.</font></p>
+               <a href="about" class="my-cd-btn primary-ie7">About Us</a>
+               <a href="tracking_no_hunt" class="my-cd-btn secondary-ie7">Tracking</a>
             </div>
          </li>
       </ul>

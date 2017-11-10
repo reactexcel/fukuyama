@@ -1,11 +1,10 @@
 
   <header>
- <nav class="navbar navbar-default navbar-fixed-top" data-offset-top="80" data-spy="affix">
+   <nav class="navbar navbar-default navbar-fixed-top" data-offset-top="80" data-spy="affix">
     <div class="container">
 
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-target="#top-navbar" data-toggle="collapse"
-            aria-expanded="false" aria-controls="navbar">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar" aria-expanded="false" aria-controls="navbar">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -17,13 +16,14 @@
       </div>
       
       <style>
-        #top-navbar-ie7 ul {
+        #top-navbar ul {
           padding: 0;
           margin: 0;
           list-style: none;
+          background-color: #fff;
         }
 
-        #top-navbar-ie7{
+        #top-navbar{
           margin-top: 10px;
         }
 
@@ -67,7 +67,7 @@
       }
       window.onload=startList;
       </script>
-      <div id="top-navbar-ie7" class="navbar-collapse collapse">
+      <div class="collapse navbar-collapse" id="top-navbar">
         <ul class="nav navbar-nav navbar-right mt-10">
           <li class="dropdown" id="dropdown-1"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Company Overview<span class="caret"></span></a>
             <ul class="dropdown-menu">
@@ -110,5 +110,6 @@
       
     </div>
   </nav>
+ 
 
   </header>

@@ -637,7 +637,71 @@ float:left;
     }
 }
 
+.my-hero-slider{
+  color:rgb(51, 51, 51);
+display:block;
+font-family:"Open Sans", sans-serif;
+font-size:13px;
+font-weight:200;
+height:500px;
+letter-spacing:0.5px;
+line-height:33px;
+list-style-type:disc;
+margin-bottom:0px;
+margin-left:0px;
+margin-right:0px;
+margin-top:0px;
+overflow-x:hidden;
+overflow-y:hidden;
+padding-bottom:0px;
+padding-left:0px;
+padding-right:0px;
+padding-top:0px;
+position:relative;
+text-size-adjust:100%;
+vertical-align:baseline;
+width:1349px;
+-webkit-font-smoothing:antialiased;
+-webkit-margin-after:0px;
+-webkit-margin-before:0px;
+-webkit-margin-end:0px;
+-webkit-margin-start:0px;
+-webkit-padding-start:0px;
+-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+}
 
+.my-full-width{
+      position: absolute;
+    /*width: 100%;*/
+    height: 100%;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    padding-top: 100px;
+    text-align: center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+}
+.my-cd-btn{ 
+   display: inline-block;
+    padding: 1.2em 1.4em;
+    margin-top: .8em;
+    background-color: rgba(212, 68, 87, 0.9);
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ffffff;
+    text-transform: uppercase;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+  }
 /*/ SLANT 1 /*/
 
 .slant1{

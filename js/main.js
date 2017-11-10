@@ -21,7 +21,7 @@ $(document).ready(function($){
 		// primaryNav.on('click', function(event){
 		// 	if($(event.target).is('.cd-primary-nav')) $(this).children('ul').toggleClass('is-visible');
 		// });
-        if(document && document.documentMode && document.documentMode != 7 && document.documentMode != 8 && document.documentMode != 9){
+        if(!document || !document.documentMode || (document.documentMode != 7 && document.documentMode != 8 && document.documentMode != 9)){
         	primaryNav.on(function(event){
 				if($(event.target).is('.cd-primary-nav')) $(this).children('ul').toggleClass('is-visible');
 			});
